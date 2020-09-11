@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>css 함수 사용</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var color = ["red","white","purple"]
+		//$("h1"): h1태그 들을 의미함
+/* 		$("h1").css("color",function(index){
+			return color[index]
+		}).css("backgroundColor","black") */
+//		$("h1") == document.getElementByTagName("h1")
+		$("h1").css({
+			"color":function(index){return color[index]},
+			"backgroundColor":"black"})
+	})
+</script>
+</head>
+<body>
+<h1>Header-0: red</h1>
+<h1>Header-1: white</h1>
+<h1>Header-2: purple</h1>
+</body>
+</html>

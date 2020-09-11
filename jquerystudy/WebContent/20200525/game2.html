@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style type="text/css">
+	* {text-align: center; margin: 0px; padding: 0px;}
+</style>
+<script type="text/javascript">
+	$(function(){
+		$("#inbtn").click(function(){
+			//$("#userNum").val(): 입력된 값
+			inputarr = $("#userNum").val().split("");	//숫자하나를 배열로 저장
+			html = "";
+			//inputarr.length: 입력된값의 길이
+			for(var i=0;i<inputarr.length;i++){
+				html += "<img width='100' height='100' border='1'/>";
+			}
+			$("#card").html(html);
+			$("#card img").each(function(index){
+				$(this).attr("src","./nums/num" + inputarr[index] + ".jpg");			
+			})
+		})
+		$("#userNum").keyup(function(event){
+			//13: 엔터키
+			if(event.keyCode == 13){
+				$("#inbtn").click(); //이벤트발생
+			}
+		})
+	})
+</script>
+</head>
+<body>
+	<div>
+		<input type="text" id="userNum">
+		<input type="button" value="입력" id="inbtn">
+	</div>
+	<div id="card"><img width='100' height='100' border='1'></div>
+</body>
+</html>

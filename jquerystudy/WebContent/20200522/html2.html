@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		//i: h1태그의 index값
+		//h: h1태그의 내용
+		$("h1").html(function(i,h){
+			return "★" + h + "★";
+		})
+	})
+</script>
+</head>
+<body>
+<h1>Header-0</h1><h1>Header-1</h1><h1>Header-2</h1>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		//h1태그 생성하여, 내용으로 Hello World를 설정하고, 화면에 출력
+		//appendTo함수: body 태그의 하위에 붙여넣기.
+		$("<h1></h1>").html("Hello World").appendTo("body")
+		//이미지태그생성하여 속성값이 Jellfish.jpg 이미지를 화면에 출력
+		//$("<img>").attr("src","Jellyfish.jpg").appendTo("body")
+		$("<img>").attr({"src":"Jellyfish.jpg",
+			width:300, height:200}).appendTo("body")
+		$("<img>",{"src":"Jellyfish.jpg",
+			width:300, height:200}).appendTo("body")
+			
+		var h1 = "<h1>Header1</h1>"
+		var h2 = "<h2>Header2</h2>"
+		$("body").append(h1,h2,h1,h2)
+	})
+</script>
+</head>
+<body>
+
+</body>
+</html>

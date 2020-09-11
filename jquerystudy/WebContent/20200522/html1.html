@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>html 함수 예제</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		//$("div").html("<h1>Header</h1>")
+		//$("div").text("<h1>Header</h1>")
+		//첫번째 div 태그의 내용이 <h1>Header-0</h1>으로 설정, 태그인식되도록
+		$("div").html(function(i,h){
+			return "<h1>Header-" + i + "</h1>";
+		})
+	})
+</script>
+</head>
+<body>
+<div></div><div></div><div></div>
+</body>
+</html>
